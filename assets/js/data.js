@@ -326,3 +326,86 @@ function getVerdict(id, test) {
   const custom = test && test.verdicts && test.verdicts[id];
   return custom ? { ...base, ...custom } : base;
 }
+
+/* ---------- Duo mode: Green or Red ----------
+ * Two people, two phones. Person A answers about themselves; their answers
+ * travel inside the challenge URL (base64url), so no backend is needed.
+ * Person B guesses. The verdict unlocks only after both sides have played.
+ */
+const DUO = {
+  id: "green-or-red",
+  name: "Green or Red",
+  tagline: "Two phones. Six questions. One verdict.",
+  hook: "Do you actually know them?",
+  description:
+    "One of you answers six questions about yourself. The other has to guess. The verdict only unlocks when both of you have played — and it is usually humbling.",
+  share: {
+    kicker: "We tried Green or Red",
+    prompt: "Think you know someone? Test them.",
+  },
+  questions: [
+    {
+      id: "battery",
+      prompt: "Your phone hits 2%. You…",
+      options: ["Stare at the wall", "Text 'bye' to everyone", "Hunt for a charger like it's a mission"],
+    },
+    {
+      id: "snack",
+      prompt: "It's 3am and you're hungry. You…",
+      options: ["Cereal over the sink", "Wake someone up for snacks", "Ignore it and go to bed"],
+    },
+    {
+      id: "compliment",
+      prompt: "Someone compliments you. You…",
+      options: ["Deflect with a joke", "Say thanks and mean it", "Overthink it for a week"],
+    },
+    {
+      id: "groupchat",
+      prompt: "The group chat explodes. You…",
+      options: ["Read all, reply to none", "Reply to every single one", "Mute and check back later"],
+    },
+    {
+      id: "plan",
+      prompt: "Plans change last minute. You…",
+      options: ["Secretly relieved", "Annoyed but say nothing", "Ask a hundred questions"],
+    },
+    {
+      id: "roadtrip",
+      prompt: "On a road trip, you…",
+      options: ["Control the playlist", "Sleep the whole way", "Be the snack curator"],
+    },
+  ],
+  verdicts: {
+    green: {
+      headline: "You know them. Scarily well.",
+      description:
+        "Five out of six. You didn't guess — you just know. That's the kind of attention no test needs to prove.",
+      science:
+        "Gottman calls the detailed knowledge partners hold about each other 'love maps' — knowing someone's inner world, not just their schedule. Couples with richer love maps handle conflict and drift better. You clearly have one.",
+    },
+    complicated: {
+      headline: "Close. You know the outline.",
+      description:
+        "You got the big stuff. The small, specific things are where the guessing starts — and that's exactly what a love map is made of.",
+      science:
+        "Love maps are built from ordinary details: how someone reacts at 3am, what they do with a dying phone. Getting the outline right is a start. The margins take time — and paying attention.",
+    },
+    red: {
+      headline: "You're guessing. Loudly.",
+      description:
+        "Two or fewer. Either you don't know them that well, or you're testing the wrong person. Both are worth knowing.",
+      science:
+        "Six questions is a snapshot, not a scorecard. But if you consistently miss the small things, that's a signal worth acting on — ask them, don't test them.",
+    },
+  },
+};
+
+function duoVerdictFor(matches) {
+  if (matches >= 5) return "green";
+  if (matches >= 3) return "complicated";
+  return "red";
+}
+
+function getDuoVerdict(id) {
+  return { ...getVerdict(id, null), ...(DUO.verdicts[id] || {}) };
+}

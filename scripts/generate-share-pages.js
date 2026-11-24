@@ -15,20 +15,23 @@ const OUT = path.join(ROOT, "share");
 fs.mkdirSync(OUT, { recursive: true });
 
 const dataCode = fs.readFileSync(path.join(ROOT, "assets/js/data.js"), "utf8")
-  + "\nglobalThis.__TESTS = TESTS; globalThis.__VERDICTS = VERDICTS; globalThis.__getVerdict = getVerdict;";
+  + "\nglobalThis.__TESTS = TESTS; globalThis.__VERDICTS = VERDICTS; globalThis.__getVerdict = getVerdict;"
+  + " globalThis.__DUO = DUO; globalThis.__getDuoVerdict = getDuoVerdict;";
 const ctx = {};
 vm.createContext(ctx);
 vm.runInContext(dataCode, ctx);
 const TESTS = ctx.__TESTS;
 const VERDICTS = ctx.__VERDICTS;
 const getVerdict = ctx.__getVerdict;
+const DUO = ctx.__DUO;
+const getDuoVerdict = ctx.__getDuoVerdict;
 
 const SITE = "https://thetestlibrary.app";
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({
   "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
 }[c]));
 
-function head({ title, description, image, url }) {
+function head({ title, description, image, url, page = "share" }) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,7 +62,7 @@ function head({ title, description, image, url }) {
     .share-card-img{width:100%;border-radius:var(--radius);border:1px solid var(--border);display:block;margin:20px 0 24px}
   </style>
 </head>
-<body data-page="share">`;
+<body data-page="${page}">`;
 }
 
 function header() {
@@ -157,6 +160,42 @@ ${footer()}
 ${scripts()}`;
 }
 
+/* ---------- Duo mode share pages ---------- */
+
+function duoScripts() {
+  return `<script src="../assets/js/data.js"></script>
+<script src="../assets/js/duo.js"></script>
+</body></html>`;
+}
+
+function duoPage(verdictId) {
+  const v = getDuoVerdict(verdictId);
+  const title = `${v.label} — Green or Red | The Test Library`;
+  const description = `${v.headline} ${DUO.share.prompt}`;
+  const image = `${SITE}/assets/og/duo-${verdictId}.png`;
+  const url = `${SITE}/share/duo-${verdictId}.html`;
+
+  return `${head({ title, description, image, url, page: "duo-share" })}
+${header()}
+<main class="wrap">
+  <a class="back-link" href="../index.html">← All tests</a>
+  <section class="share-hero">
+    <div class="eyebrow">A TWO-PLAYER VERDICT</div>
+    <h1 style="font-size:clamp(26px,7vw,36px);letter-spacing:-0.025em;line-height:1.15">Green or Red</h1>
+    <div class="share-verdict ${esc(v.tone)}">${esc(v.label)}</div>
+    <p style="font-size:17px;color:var(--text-2)">${esc(v.headline)}</p>
+  </section>
+  <img class="share-card-img" src="../assets/og/duo-${verdictId}.png" alt="${esc(v.label)} duo result card">
+  <div id="duoShare"></div>
+  <div class="science-note">
+    <h3>The research behind it</h3>
+    <p>${esc(v.science)}</p>
+  </div>
+</main>
+${footer()}
+${duoScripts()}`;
+}
+
 let count = 0;
 for (const test of TESTS) {
   fs.writeFileSync(path.join(OUT, `${test.id}-cover.html`), coverPage(test));
@@ -165,5 +204,9 @@ for (const test of TESTS) {
     fs.writeFileSync(path.join(OUT, `${test.id}-${vid}.html`), resultPage(test, vid));
     count++;
   }
+}
+for (const vid of Object.keys(VERDICTS)) {
+  fs.writeFileSync(path.join(OUT, `duo-${vid}.html`), duoPage(vid));
+  count++;
 }
 console.log(`Generated ${count} share pages in ${OUT}`);

@@ -19,13 +19,16 @@ fs.mkdirSync(OUT, { recursive: true });
 
 // Load data.js without executing app.js
 const dataCode = fs.readFileSync(path.join(ROOT, "assets/js/data.js"), "utf8")
-  + "\nglobalThis.__TESTS = TESTS; globalThis.__VERDICTS = VERDICTS; globalThis.__getVerdict = getVerdict;";
+  + "\nglobalThis.__TESTS = TESTS; globalThis.__VERDICTS = VERDICTS; globalThis.__getVerdict = getVerdict;"
+  + " globalThis.__DUO = DUO; globalThis.__getDuoVerdict = getDuoVerdict;";
 const ctx = {};
 vm.createContext(ctx);
 vm.runInContext(dataCode, ctx);
 const TESTS = ctx.__TESTS;
 const VERDICTS = ctx.__VERDICTS;
 const getVerdict = ctx.__getVerdict;
+const DUO = ctx.__DUO;
+const getDuoVerdict = ctx.__getDuoVerdict;
 
 const W = 1200, H = 630;
 const FONT = "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif";
@@ -165,10 +168,80 @@ function drawResult(test, verdictId) {
   console.log("wrote", path.basename(file));
 }
 
+/* ---------- Duo mode: Green or Red ---------- */
+
+function drawDuoCover() {
+  const p = PALETTE.cover;
+  const { canvas, c } = base(p);
+  brand(c, p.accent);
+
+  c.fillStyle = "#a6abb4";
+  c.font = `700 16px ${FONT}`;
+  c.fillText("TWO-PLAYER TEST  /  RELATIONSHIP", 76, 190);
+
+  c.fillStyle = "#f2f3f5";
+  c.font = `750 72px ${FONT}`;
+  c.fillText("Green or Red", 76, 282);
+
+  c.fillStyle = p.accent;
+  c.fillRect(76, 316, 110, 5);
+
+  c.fillStyle = "#c9cdd4";
+  c.font = `400 30px ${FONT}`;
+  c.fillText(DUO.tagline, 76, 384);
+
+  c.fillStyle = p.accent;
+  c.font = `700 27px ${FONT}`;
+  c.fillText(DUO.hook, 76, H - 92);
+
+  c.fillStyle = "#6f757e";
+  c.font = `500 19px ${FONT}`;
+  c.fillText("thetestlibrary.app", 76, H - 56);
+
+  fs.writeFileSync(path.join(OUT, "duo-cover.png"), canvas.toBuffer("image/png"));
+  console.log("wrote duo-cover.png");
+}
+
+function drawDuoResult(verdictId) {
+  const v = getDuoVerdict(verdictId);
+  const p = PALETTE[v.tone];
+  const { canvas, c } = base(p);
+  brand(c, p.accent);
+
+  c.fillStyle = "#a6abb4";
+  c.font = `700 16px ${FONT}`;
+  c.fillText("GREEN OR RED  /  TWO-PLAYER TEST", 76, 190);
+
+  c.fillStyle = p.accent;
+  c.font = `800 62px ${FONT}`;
+  c.fillText(v.label, 76, 275);
+
+  c.fillStyle = "#f2f3f5";
+  c.font = `700 48px ${FONT}`;
+  const afterHead = wrap(c, v.headline, 76, 350, W - 160, 58, 2);
+
+  c.fillStyle = "#c9cdd4";
+  c.font = `400 26px ${FONT}`;
+  wrap(c, v.description, 76, afterHead + 48, W - 170, 36, 3);
+
+  c.fillStyle = p.accent;
+  c.font = `700 27px ${FONT}`;
+  c.fillText(DUO.share.prompt, 76, H - 92);
+
+  c.fillStyle = "#6f757e";
+  c.font = `500 19px ${FONT}`;
+  c.fillText("thetestlibrary.app", 76, H - 56);
+
+  fs.writeFileSync(path.join(OUT, `duo-${verdictId}.png`), canvas.toBuffer("image/png"));
+  console.log(`wrote duo-${verdictId}.png`);
+}
+
 for (const test of TESTS) {
   drawCover(test);
   for (const vid of Object.keys(VERDICTS)) drawResult(test, vid);
 }
+drawDuoCover();
+for (const vid of Object.keys(VERDICTS)) drawDuoResult(vid);
 console.log(`\nDone. ${fs.readdirSync(OUT).length} images in ${OUT}`);
 
 // Site-wide home card

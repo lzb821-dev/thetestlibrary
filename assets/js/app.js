@@ -40,6 +40,17 @@ function renderHome() {
       <p>The viral relationship tests you keep seeing on TikTok — in one place. Run them in real life, record what happened, get a verdict you can share.</p>
       <div class="micro">No sign-up. No account. Just you and the person you're testing.</div>
     </section>
+    <section class="section duo-feature-wrap">
+      <a class="duo-feature" href="duo.html">
+        <div class="card-top">
+          <span class="chip">NEW · TWO PLAYERS</span>
+          <span class="chip hot">Green or Red</span>
+        </div>
+        <div class="card-title">Do you actually know them?</div>
+        <div class="card-tagline">Two phones. Six questions. One verdict — unlocked only when both of you have played.</div>
+        <div class="duo-feature-cta">Start a two-player test →</div>
+      </a>
+    </section>
     <section class="section">
       <div class="section-head">
         <h2>Pick a test</h2>

@@ -1,0 +1,5 @@
+# Local tooling / secrets — never commit
+.workbuddy/
+node_modules/
+*.log
+.DS_Store

@@ -1,7 +1,7 @@
 # The Test Library · 建站进度
 
 > 创建时间：2026-11-24 17:23
-> 最近更新：2026-11-24 17:40
+> 最近更新：2026-11-25 09:20
 > 总体进度：6/14 步已完成（43%）
 > 当前步骤：第 2 步「变现目标测算」· 进行中
 
@@ -22,13 +22,13 @@
 | --- | --- | --- | --- | --- | --- |
 | 1 | 选题与关键词验证 | 已完成 | 2026-11-24 | 完成两轮社交平台研究：中文平台四条主线 + 欧美实测型测试（Bird Theory 5600万播放、Aura 1.07亿帖、#personalitytest 19亿观看） | 定案 A 方向 The Test Library，用现成热点词吃 SEO |
 | 2 | 变现目标测算 | 进行中 |  |  | 讨论过 AdSense 规模变现与 .app 首年$8.75/续费$14.93 成本，但尚无量化月收入目标与所需流量测算表 |
-| 3 | 原型与页面结构 | 已完成 | 2026-11-24 | data.js 单一数据源 + 生成器；3 个单人测试、Green or Red 双人测试、15 个预渲染分享页、17 张 OG 图 | 纯前端零依赖；双人模式用 URL 载荷传递 A 的答案，无后端 |
+| 3 | 原型与页面结构 | 已完成 | 2026-11-24 | data.js 单一数据源 + 生成器；3 单人测试 + Green or Red 双人 + Aura Score 内容栏目；20 个预渲染分享页、23 张 OG 图 | 三条产品线共用一套 OG/分享页生成脚本 |
 | 4 | 域名与 DNS 接入 | 已完成 | 2026-11-24 | thetestlibrary.app 已在 Porkbun 注册并接入 Cloudflare | nslookup 验证 NS=liv.ns/aarav.ns.cloudflare.com |
 | 5 | 部署配置四件套 | 已跳过 |  |  | 本项目用 Cloudflare Pages 连接 GitHub 自动部署（Framework=None、Build command 留空、output=/），不需要 wrangler.jsonc/worker.js/.assetsignore 四件套 |
-| 6 | 代码仓库与部署密钥 | 已完成 | 2026-11-24 | https://github.com/lzb821-dev/thetestlibrary （PUBLIC）最新提交 3cbf88d | gh CLI 登录 lzb821-dev；SSH key 无权限、HTTPS 凭据弹窗被禁，用 gh auth token 临时嵌入 URL 推送后还原 |
-| 7 | 部署上线与域名绑定 | 已完成 | 2026-11-24 | https://thetestlibrary.app 上线；单人+双人全部页面、17 OG 图、15 分享页均 200 | Cloudflare 自动部署；4 种爬虫 UA 抓双人分享页均读到完整 OG 标签 |
+| 6 | 代码仓库与部署密钥 | 已完成 | 2026-11-24 | https://github.com/lzb821-dev/thetestlibrary （PUBLIC）最新提交 ad1a428 | gh CLI 登录 lzb821-dev；SSH key 无权限、HTTPS 凭据弹窗被禁，用 gh auth token 临时嵌入 URL 推送后还原 |
+| 7 | 部署上线与域名绑定 | 已完成 | 2026-11-24 | https://thetestlibrary.app 上线；单人/双人/Aura 全部页面、23 OG 图、20 分享页均 200 | Cloudflare 自动部署；4 种爬虫 UA 抓双人分享页均读到完整 OG 标签 |
 | 8 | 内容、解释与合规页 | 进行中 |  |  | 有首页/测试说明/script/判定/分享完整流程文案，但缺 about/privacy/contact 等合规页（英文站面向欧美用户，隐私页建议补） |
-| 9 | 图标、PWA 与社交素材 | 进行中 |  | 17 张 1200×630 OG 图（含双人封面与三档判定）+ 全页面 og:image/twitter:card 上线可抓取 | 社交素材完成；favicon、PWA manifest 未做，故不标 done |
+| 9 | 图标、PWA 与社交素材 | 进行中 |  | 23 张 1200×630 OG 图（含 Aura 五档）+ 全页面 og:image/twitter:card 上线可抓取 | 社交素材完成；favicon、PWA manifest 未做，故不标 done |
 | 10 | 统计钩子与 ads.txt | 未开始 |  |  | 无 ads.txt、无统计钩子，尚未接入 Cloudflare Web Analytics |
 | 11 | 后端与数据（按需） | 已跳过 |  |  | 纯静态站，判定与统计全在浏览器端（localStorage），无需 D1/后端 |
 | 12 | 变现申请与收款配置 | 未开始 |  |  | 广告变现尚未申请；域名成本已确认 Porkbun 首年$8.75/续费$14.93 |
@@ -39,8 +39,8 @@
 
 ## 当前焦点与阻塞
 
-- 正在做：B 方向 Green or Red 双人测试已上线；下一步在变现准备与 C 方向之间选择
-- 阻塞点：无技术阻塞；AdSense 收款需用户提供税务/收款信息
+- 正在做：A/B/C 三条产品线全部上线；下一步聚焦变现准备（合规页+统计+AdSense）
+- 阻塞点：AdSense 收款需用户提供税务/收款信息
 
 ## 后续更新计划
 
@@ -50,7 +50,7 @@
 | 2 | 中 | 接 Cloudflare Web Analytics + 放 ads.txt |  | 待办 |
 | 3 | 高 | 申请 AdSense 并配置收款（W-8BEN/Payoneer） |  | 待办 |
 | 4 | 高 | B 方向：双人实时判定测试开发 |  | 已完成 |
-| 5 | 低 | C 方向：Aura Score 内容栏目 |  | 待办 |
+| 5 | 低 | C 方向：Aura Score 内容栏目 |  | 已完成 |
 
 ## 变更记录
 
@@ -81,3 +81,9 @@
 - 2026-11-24 17:40 步骤 9「图标、PWA 与社交素材」，更新关键产出
 - 2026-11-24 17:40 后续计划第 4 项标记为已完成
 - 2026-11-24 17:40 更新当前焦点与阻塞信息
+- 2026-11-25 09:20 步骤 3「原型与页面结构」，更新关键产出，更新备注
+- 2026-11-25 09:20 步骤 6「代码仓库与部署密钥」，更新关键产出
+- 2026-11-25 09:20 步骤 7「部署上线与域名绑定」，更新关键产出
+- 2026-11-25 09:20 步骤 9「图标、PWA 与社交素材」，更新关键产出
+- 2026-11-25 09:20 后续计划第 5 项标记为已完成
+- 2026-11-25 09:20 更新当前焦点与阻塞信息

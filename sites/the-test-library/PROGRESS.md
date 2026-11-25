@@ -1,7 +1,7 @@
 # The Test Library · 建站进度
 
 > 创建时间：2026-11-24 17:23
-> 最近更新：2026-11-25 10:08
+> 最近更新：2026-11-25 10:19
 > 总体进度：9/14 步已完成（64%）
 > 当前步骤：第 2 步「变现目标测算」· 进行中
 
@@ -22,7 +22,7 @@
 | --- | --- | --- | --- | --- | --- |
 | 1 | 选题与关键词验证 | 已完成 | 2026-11-24 | 完成两轮社交平台研究：中文平台四条主线 + 欧美实测型测试（Bird Theory 5600万播放、Aura 1.07亿帖、#personalitytest 19亿观看） | 定案 A 方向 The Test Library，用现成热点词吃 SEO |
 | 2 | 变现目标测算 | 进行中 |  |  | 讨论过 AdSense 规模变现与 .app 首年$8.75/续费$14.93 成本，但尚无量化月收入目标与所需流量测算表 |
-| 3 | 原型与页面结构 | 已完成 | 2026-11-24 | data.js 单一数据源 + 生成器；3 单人测试 + Green or Red 双人 + Aura Score 内容栏目；20 个预渲染分享页、23 张 OG 图 | 三条产品线共用一套 OG/分享页生成脚本 |
+| 3 | 原型与页面结构 | 已完成 | 2026-11-24 | 题库从 3 扩到 8 个测试（新增 Green Line Theory / Tell Me Without Telling Me / Don't Laugh / Couple Telepathy / Put a Finger Down）；43 张 OG 图 + 40 个分享页 + 54 条 sitemap；全 46 页注入 WebSite/ItemList + WebPage/BreadcrumbList JSON-LD | 新增词来自欧美社媒热门研究，Green Line Theory 为 2026-11 刚 viral 且被专家 debunk 的词；scripts/README.md 记录生成顺序（生成类在前、注入类在后） |
 | 4 | 域名与 DNS 接入 | 已完成 | 2026-11-24 | thetestlibrary.app 已在 Porkbun 注册并接入 Cloudflare | nslookup 验证 NS=liv.ns/aarav.ns.cloudflare.com |
 | 5 | 部署配置四件套 | 已跳过 |  |  | 本项目用 Cloudflare Pages 连接 GitHub 自动部署（Framework=None、Build command 留空、output=/），不需要 wrangler.jsonc/worker.js/.assetsignore 四件套 |
 | 6 | 代码仓库与部署密钥 | 已完成 | 2026-11-24 | https://github.com/lzb821-dev/thetestlibrary （PUBLIC）最新提交 ad1a428 | gh CLI 登录 lzb821-dev；SSH key 无权限、HTTPS 凭据弹窗被禁，用 gh auth token 临时嵌入 URL 推送后还原 |
@@ -39,8 +39,8 @@
 
 ## 当前焦点与阻塞
 
-- 正在做：等待 AdSense 20 天审核期；优先打开统计、补 SEO 收录、扩容题库、启动冷启动
-- 阻塞点：AdSense 需等约20天；统计 token 未填导致后台无数据；变现测算缺月收入目标
+- 正在做：等待 AdSense 20 天；已在 docs/ 备好变现测算表与 GSC 验证指南
+- 阻塞点：GSC 需用户 Google 账号完成 DNS 验证；统计 cfToken 未填；AdSense 等 20 天；变现测算仍需用户给月收入目标数字
 
 ## 后续更新计划
 
@@ -54,15 +54,11 @@
 | 6 | 高 | 填 Cloudflare Web Analytics token 打开真实统计 |  | 待办 |
 | 7 | 高 | 补 sitemap.xml + robots.txt，验证 GSC/Bing 并提交 |  | 待办 |
 | 8 | 中 | favicon + PWA manifest 收尾（第9步） |  | 已完成 |
-| 9 | 中 | 题库扩容到 8-10 个测试 + JSON-LD 结构化数据 |  | 待办 |
+| 9 | 中 | 题库扩容到 8-10 个测试 + JSON-LD 结构化数据 |  | 已完成 |
 | 10 | 高 | Reddit/TikTok 冷启动首批发帖 |  | 待办 |
 
 ## 变更记录
 
-- 2026-11-24 17:23 初始化建站进度跟踪，共 14 个标准步骤
-- 2026-11-24 17:23 步骤 1「选题与关键词验证」，未开始 → 已完成，更新关键产出，更新备注
-- 2026-11-24 17:23 步骤 2「变现目标测算」，未开始 → 进行中，更新备注
-- 2026-11-24 17:23 步骤 3「原型与页面结构」，未开始 → 已完成，更新关键产出，更新备注
 - 2026-11-24 17:23 步骤 4「域名与 DNS 接入」，未开始 → 已完成，更新关键产出，更新备注
 - 2026-11-24 17:23 步骤 5「部署配置四件套」，未开始 → 已跳过，更新备注
 - 2026-11-24 17:23 步骤 6「代码仓库与部署密钥」，未开始 → 已完成，更新关键产出，更新备注
@@ -109,3 +105,7 @@
 - 2026-11-25 10:08 步骤 9「图标、PWA 与社交素材」，进行中 → 已完成，更新关键产出，更新备注
 - 2026-11-25 10:08 后续计划第 8 项标记为已完成
 - 2026-11-25 10:08 新增 sitemap.xml(29 URL)+robots.txt 并上线；生成器 generate-sitemap.js 从 data.js 自动读页面清单；线上验证 10 个新文件全 200、MIME 正确、26 页 head 各 4 条图标链接、manifest JSON 合法
+- 2026-11-25 10:19 步骤 3「原型与页面结构」，更新关键产出，更新备注
+- 2026-11-25 10:19 后续计划第 9 项标记为已完成
+- 2026-11-25 10:19 更新当前焦点与阻塞信息
+- 2026-11-25 10:19 新增 docs/变现目标测算.md（00/00/000 三档 × RPM // 倒推表，域名成本 .24/月，盈亏平衡月 PV≈310）；docs/GSC-验证指南.md（DNS TXT 方式推荐，含 Cloudflare 加记录步骤与提交 sitemap 流程）。线上验证：5 新分享页+5 新 OG 全 200，sitemap 54 条，JSON-LD 46 页全合法

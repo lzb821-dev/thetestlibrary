@@ -16,7 +16,8 @@ fs.mkdirSync(OUT, { recursive: true });
 
 const dataCode = fs.readFileSync(path.join(ROOT, "assets/js/data.js"), "utf8")
   + "\nglobalThis.__TESTS = TESTS; globalThis.__VERDICTS = VERDICTS; globalThis.__getVerdict = getVerdict;"
-  + " globalThis.__DUO = DUO; globalThis.__getDuoVerdict = getDuoVerdict;";
+  + " globalThis.__DUO = DUO; globalThis.__getDuoVerdict = getDuoVerdict;"
+  + " globalThis.__AURA_TIERS = AURA_TIERS; globalThis.__getAuraTier = getAuraTier;";
 const ctx = {};
 vm.createContext(ctx);
 vm.runInContext(dataCode, ctx);
@@ -25,6 +26,8 @@ const VERDICTS = ctx.__VERDICTS;
 const getVerdict = ctx.__getVerdict;
 const DUO = ctx.__DUO;
 const getDuoVerdict = ctx.__getDuoVerdict;
+const AURA_TIERS = ctx.__AURA_TIERS;
+const getAuraTier = ctx.__getAuraTier;
 
 const SITE = "https://thetestlibrary.app";
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({
@@ -196,6 +199,37 @@ ${footer()}
 ${duoScripts()}`;
 }
 
+/* ---------- Aura Score share pages ---------- */
+
+function auraScripts() {
+  return `<script src="../assets/js/data.js"></script>
+<script src="../assets/js/aura.js"></script>
+</body></html>`;
+}
+
+function auraPage(tier) {
+  const title = `${tier.label} — Aura Score | The Test Library`;
+  const description = `${tier.headline} ${tier.description}`;
+  const image = `${SITE}/assets/og/aura-${tier.id}.png`;
+  const url = `${SITE}/share/aura-${tier.id}.html`;
+
+  return `${head({ title, description, image, url, page: "aura-share" })}
+${header()}
+<main class="wrap">
+  <a class="back-link" href="../index.html">← All tests</a>
+  <section class="share-hero">
+    <div class="eyebrow">AURA SCORE · THE VERDICT</div>
+    <h1 style="font-size:clamp(26px,7vw,36px);letter-spacing:-0.025em;line-height:1.15">Aura Score</h1>
+    <div class="share-verdict" style="color:${tier.tone === "green" ? "var(--green)" : tier.tone === "red" ? "var(--red)" : tier.tone === "orange" ? "#fb923c" : "var(--amber)"}">${esc(tier.label)}</div>
+    <p style="font-size:17px;color:var(--text-2)">${esc(tier.headline)}</p>
+  </section>
+  <img class="share-card-img" src="../assets/og/aura-${tier.id}.png" alt="${esc(tier.label)} aura result card">
+  <div id="auraShare"></div>
+</main>
+${footer()}
+${auraScripts()}`;
+}
+
 let count = 0;
 for (const test of TESTS) {
   fs.writeFileSync(path.join(OUT, `${test.id}-cover.html`), coverPage(test));
@@ -207,6 +241,10 @@ for (const test of TESTS) {
 }
 for (const vid of Object.keys(VERDICTS)) {
   fs.writeFileSync(path.join(OUT, `duo-${vid}.html`), duoPage(vid));
+  count++;
+}
+for (const tier of AURA_TIERS) {
+  fs.writeFileSync(path.join(OUT, `aura-${tier.id}.html`), auraPage(tier));
   count++;
 }
 console.log(`Generated ${count} share pages in ${OUT}`);

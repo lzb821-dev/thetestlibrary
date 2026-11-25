@@ -409,3 +409,107 @@ function duoVerdictFor(matches) {
 function getDuoVerdict(id) {
   return { ...getVerdict(id, null), ...(DUO.verdicts[id] || {}) };
 }
+
+/* ---------- C mode: Aura Score ----------
+ * Content-led, daily-question format built on the "aura points" meme
+ * (100M+ TikTok posts). Users read a real-life scenario, guess whether it
+ * raises or drains someone's aura, then see the internet's verdict + score.
+ */
+const AURA_TIERS = [
+  {
+    id: "legendary", min: 70, label: "MAIN CHARACTER", tone: "gold",
+    headline: "This is aura farming.",
+    description: "Not just good — cinematic. People would replay this moment in their head.",
+  },
+  {
+    id: "positive", min: 30, label: "CLEAN AURA", tone: "green",
+    headline: "Clean. Unbothered. Respect.",
+    description: "Quietly impressive. The room noticed and nobody said anything.",
+  },
+  {
+    id: "neutral", min: -29, label: "NEUTRAL AURA", tone: "amber",
+    headline: "The aura equivalent of a shrug.",
+    description: "Nothing gained, nothing lost. Perfectly average, which is not an insult.",
+  },
+  {
+    id: "negative", min: -69, label: "AURA DRAIN", tone: "orange",
+    headline: "The room got colder.",
+    description: "A small, specific kind of cringe. Everyone felt it and nobody mentioned it.",
+  },
+  {
+    id: "criminal", min: -100, label: "NEGATIVE AURA", tone: "red",
+    headline: "This is a whole red flag.",
+    description: "Not a momentary lapse — a personality. The aura did not just drop, it left.",
+  },
+];
+
+const AURA_SCENARIOS = [
+  {
+    id: "skydiving",
+    text: "He skydived over the Empire State Building and still answered his text.",
+    score: -47,
+    why: "Being somewhere extraordinary and choosing the group chat is a choice. The sky was doing a lot and he ignored it.",
+  },
+  {
+    id: "flowchart",
+    text: "She sent 'sorry I'm late' and then a two-paragraph explanation with a flowchart.",
+    score: 34,
+    why: "Overcommitted? Absolutely. But the flowchart is a commitment to the bit, and the internet respects commitment.",
+  },
+  {
+    id: "door",
+    text: "He held the door open, then mentioned it for the rest of the evening.",
+    score: -12,
+    why: "The act was fine. The receipt is the problem. Aura cannot be collected like a loyalty point.",
+  },
+  {
+    id: "ordering",
+    text: "They ordered for the whole table without asking and got every single order right.",
+    score: 86,
+    why: "Audacious, and then correct. Main character energy without the usual main character downside.",
+  },
+  {
+    id: "circleback",
+    text: "He said 'let's circle back on this' in a text to his own brother.",
+    score: -64,
+    why: "Some aura never recovers from a corporate voice note. The brother probably screenshotted it.",
+  },
+  {
+    id: "toast",
+    text: "She posted a photo of her burnt toast with the caption 'breakfast is served'.",
+    score: 45,
+    why: "Unbothered in the face of evidence. Turning a small failure into a bit is a rare, quiet skill.",
+  },
+  {
+    id: "moving",
+    text: "He agreed to help a friend move and showed up with a truck and six other people.",
+    score: 96,
+    why: "Over-delivering with no announcement is the purest form of aura. He probably said 'no worries' too.",
+  },
+  {
+    id: "ghosted",
+    text: "She ghosted for three weeks, then replied 'lol just saw this'.",
+    score: -88,
+    why: "The 'lol' is doing serious damage here. This is not a drop in aura — it is an eviction.",
+  },
+  {
+    id: "suit",
+    text: "He wore a full suit to casual Friday and said 'I like to be prepared'.",
+    score: 22,
+    why: "Unshakeable confidence, slightly misaligned with the dress code. The nerve earns points.",
+  },
+  {
+    id: "meeting",
+    text: "They let an obviously wrong answer stand so a colleague wouldn't be embarrassed.",
+    score: 79,
+    why: "Nobody saw the sacrifice, which is exactly why it counts. Quiet nobility is high-aura behaviour.",
+  },
+];
+
+function auraTierFor(score) {
+  return AURA_TIERS.find((tier) => score >= tier.min) || AURA_TIERS[AURA_TIERS.length - 1];
+}
+
+function getAuraTier(id) {
+  return AURA_TIERS.find((tier) => tier.id === id) || AURA_TIERS[2];
+}

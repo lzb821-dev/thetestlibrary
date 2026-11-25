@@ -50,6 +50,15 @@ function renderHome() {
         <div class="card-tagline">Two phones. Six questions. One verdict — unlocked only when both of you have played.</div>
         <div class="duo-feature-cta">Start a two-player test →</div>
       </a>
+      <a class="duo-feature aura-feature" href="aura.html">
+        <div class="card-top">
+          <span class="chip">DAILY · ONE PLAYER</span>
+          <span class="chip hot">Aura Score</span>
+        </div>
+        <div class="card-title">Read the room. Rate the vibe.</div>
+        <div class="card-tagline">One real-life scenario a day. Guess if it gains or drains aura, then see the internet's score.</div>
+        <div class="duo-feature-cta">Check today's aura →</div>
+      </a>
     </section>
     <section class="section">
       <div class="section-head">

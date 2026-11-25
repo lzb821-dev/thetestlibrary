@@ -700,6 +700,85 @@ body {
 .aura-call.hit .aura-call-mark { background: var(--green-dim); color: var(--green); }
 .aura-call.miss .aura-call-mark { background: var(--red-dim); color: var(--red); }
 
+/* ---------- Doc pages: About / Privacy ---------- */
+
+.doc { padding: 8px 0 40px; }
+.doc-kicker {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  margin: 12px 0 10px;
+}
+.doc h1 {
+  font-size: clamp(34px, 9vw, 48px);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+  margin-bottom: 18px;
+}
+.doc h2 {
+  font-size: 20px;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  margin: 36px 0 12px;
+  padding-top: 4px;
+  scroll-margin-top: 80px;
+}
+.doc .doc-lead {
+  font-size: 16px;
+  color: var(--text-2);
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+.doc section { scroll-margin-top: 70px; }
+.doc p { color: var(--text-2); line-height: 1.7; margin-bottom: 14px; }
+.doc strong { color: var(--text); font-weight: 700; }
+.doc em { color: var(--text); font-style: italic; }
+.doc a { color: var(--accent); text-underline-offset: 3px; }
+.doc ul { margin: 4px 0 16px; padding-left: 20px; }
+.doc li { color: var(--text-2); line-height: 1.7; margin-bottom: 10px; }
+.doc li::marker { color: var(--text-3); }
+.doc code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 1px 6px;
+  color: var(--text);
+}
+.doc-toc {
+  display: grid;
+  gap: 2px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 26px 0 8px;
+}
+.doc-toc a {
+  color: var(--text-2);
+  text-decoration: none;
+  font-size: 14px;
+  padding: 5px 0;
+  line-height: 1.4;
+}
+.doc-toc a:hover { color: var(--accent); }
+.footer-links {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.footer-links a {
+  color: var(--text-2);
+  text-decoration: none;
+}
+.footer-links a:hover { color: var(--accent); }
+.footer-links span { color: var(--text-3); }
+
 @media (min-width: 600px) {
   .action-stack { grid-template-columns: 1fr 1fr; }
   .option-list { grid-template-columns: 1fr 1fr; }

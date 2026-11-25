@@ -79,6 +79,7 @@ function footer() {
   return `<footer class="site-footer"><div class="wrap">
     <p>The Test Library — real-life tests, real reactions.</p>
     <p>For entertainment only. Not psychological advice.</p>
+    <p class="footer-links"><a href="../about.html">About</a><span>·</span><a href="../privacy.html">Privacy</a><span>·</span><a href="../index.html">All tests</a></p>
   </div></footer>`;
 }
 

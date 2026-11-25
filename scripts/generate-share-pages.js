@@ -84,7 +84,9 @@ function footer() {
 }
 
 function scripts() {
-  return `<script src="../assets/js/data.js"></script>
+  return `<script src="../assets/js/site.config.js"></script>
+<script src="../assets/js/analytics.js"></script>
+<script src="../assets/js/data.js"></script>
 <script src="../assets/js/app.js"></script>
 </body></html>`;
 }
@@ -167,7 +169,9 @@ ${scripts()}`;
 /* ---------- Duo mode share pages ---------- */
 
 function duoScripts() {
-  return `<script src="../assets/js/data.js"></script>
+  return `<script src="../assets/js/site.config.js"></script>
+<script src="../assets/js/analytics.js"></script>
+<script src="../assets/js/data.js"></script>
 <script src="../assets/js/duo.js"></script>
 </body></html>`;
 }
@@ -203,7 +207,9 @@ ${duoScripts()}`;
 /* ---------- Aura Score share pages ---------- */
 
 function auraScripts() {
-  return `<script src="../assets/js/data.js"></script>
+  return `<script src="../assets/js/site.config.js"></script>
+<script src="../assets/js/analytics.js"></script>
+<script src="../assets/js/data.js"></script>
 <script src="../assets/js/aura.js"></script>
 </body></html>`;
 }

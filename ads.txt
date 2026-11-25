@@ -1,0 +1,16 @@
+# ads.txt for thetestlibrary.app
+#
+# No AdSense publisher ID is configured yet, so there are no authorized
+# seller entries. This placeholder is intentional: publishing a fake or
+# example pub ID would authorize the wrong seller and is worse than none.
+#
+# To activate:
+#   1. Set adsense.pubId in assets/js/site.config.js to your real ID
+#      (16 digits, e.g. pub-1234567890123456)
+#   2. Run: node scripts/generate-ads-txt.js
+#
+# The generated line will be:
+# google.com, pub-<your 16 digits>, DIRECT, f08c47fec0942fa0
+#
+# Note: ads.txt must live at the domain root (https://thetestlibrary.app/ads.txt).
+#

@@ -55,6 +55,10 @@ function head({ title, description, image, url, page = "share" }) {
   <meta name="twitter:description" content="${esc(description)}">
   <meta name="twitter:image" content="${esc(image)}">
   <meta name="theme-color" content="#0c0d0f">
+  <link rel="icon" href="../favicon.ico" sizes="any" data-icon-links>
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png" data-icon-links>
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" data-icon-links>
+  <link rel="manifest" href="../site.webmanifest" data-icon-links>
   <link rel="stylesheet" href="../assets/css/style.css">
   <style>
     .share-hero{padding:40px 0 20px}

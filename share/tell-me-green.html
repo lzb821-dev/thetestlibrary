@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GREEN FLAG — Tell Me Without Telling Me | The Test Library</title>
+  <meta name="description" content="They know the small stuff. What would yours say?">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Test Library">
+  <meta property="og:title" content="GREEN FLAG — Tell Me Without Telling Me | The Test Library">
+  <meta property="og:description" content="They know the small stuff. What would yours say?">
+  <meta property="og:image" content="https://thetestlibrary.app/assets/og/tell-me-green.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://thetestlibrary.app/share/tell-me-green.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GREEN FLAG — Tell Me Without Telling Me | The Test Library">
+  <meta name="twitter:description" content="They know the small stuff. What would yours say?">
+  <meta name="twitter:image" content="https://thetestlibrary.app/assets/og/tell-me-green.png">
+  <meta name="theme-color" content="#0c0d0f">
+  <link rel="icon" href="../favicon.ico" sizes="any" data-icon-links>
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png" data-icon-links>
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" data-icon-links>
+  <link rel="manifest" href="../site.webmanifest" data-icon-links>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .share-hero{padding:40px 0 20px}
+    .share-verdict{font-size:clamp(36px,10vw,56px);font-weight:800;letter-spacing:-0.03em;line-height:1.05;margin:8px 0 14px}
+    .share-verdict.green{color:var(--green)}
+    .share-verdict.amber{color:var(--amber)}
+    .share-verdict.red{color:var(--red)}
+    .share-card-img{width:100%;border-radius:var(--radius);border:1px solid var(--border);display:block;margin:20px 0 24px}
+  </style>
+  <script type="application/ld+json" data-jsonld>
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://thetestlibrary.app/share/tell-me-green.html#webpage",
+      "url": "https://thetestlibrary.app/share/tell-me-green.html",
+      "name": "The Test Library",
+      "publisher": {
+        "@id": "https://thetestlibrary.app/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://thetestlibrary.app/#website"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thetestlibrary.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "tell-me-green.html",
+          "item": "https://thetestlibrary.app/tell-me-green.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body data-page="share">
+<header class="site-header"><div class="header-inner">
+    <a class="brand" href="../index.html"><span class="brand-mark">T</span><span>The Test Library</span></a>
+    <span class="header-note">No sign-up</span>
+  </div></header>
+<main class="wrap">
+  <a class="back-link" href="../index.html">← All tests</a>
+  <section class="share-hero">
+    <div class="eyebrow">A FRIEND SHARED THEIR VERDICT</div>
+    <h1 style="font-size:clamp(26px,7vw,36px);letter-spacing:-0.025em;line-height:1.15">Tell Me Without Telling Me</h1>
+    <div class="share-verdict green">GREEN FLAG</div>
+    <p style="font-size:17px;color:var(--text-2)">They know the small stuff.</p>
+  </section>
+  <img class="share-card-img" src="../assets/og/tell-me-green.png" alt="GREEN FLAG result card">
+  <div class="science-note">
+    <h3>What they got</h3>
+    <p>A specific detail beats a thousand &#39;I love you&#39;s. They&#39;ve been paying attention.</p>
+  </div>
+  <div class="action-stack">
+    <a class="btn btn-primary" id="tryBtn" href="../test.html?id=tell-me&from=A%20friend">Find out yours →</a>
+    <a class="btn btn-ghost" href="../index.html">Browse all tests</a>
+  </div>
+  <p class="disclaimer">For fun, not a diagnosis. One test never defines a relationship.</p>
+</main>
+<footer class="site-footer"><div class="wrap">
+    <p>The Test Library — real-life tests, real reactions.</p>
+    <p>For entertainment only. Not psychological advice.</p>
+    <p class="footer-links"><a href="../about.html">About</a><span>·</span><a href="../privacy.html">Privacy</a><span>·</span><a href="../index.html">All tests</a></p>
+  </div></footer>
+<script>
+  (function(){
+    var from = new URLSearchParams(location.search).get('from');
+    if (from) {
+      var a = document.getElementById('tryBtn');
+      if (a) a.href = '../test.html?id=tell-me&from=' + encodeURIComponent(from);
+      var h = document.querySelector('.share-hero .eyebrow');
+      if (h) h.textContent = from.toUpperCase() + ' SHARED THEIR VERDICT';
+    }
+  })();
+</script>
+<script src="../assets/js/site.config.js"></script>
+<script src="../assets/js/analytics.js"></script>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/app.js"></script>
+</body></html>

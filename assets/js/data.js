@@ -313,6 +313,451 @@ const TESTS = [
       prompt: "Could yours handle all four?",
     },
   },
+  {
+    id: "green-line",
+    name: "The Green Line Theory",
+    category: "Relationship",
+    tagline: "Draw a line. Read the power dynamic.",
+    hook: "The photo test everyone's arguing about.",
+    description:
+      "Draw an imaginary green line down each person in a couple photo. Whoever stands straighter is supposedly 'in control'. A body language expert says there's zero science behind it.",
+    meta: {
+      time: "10 seconds",
+      players: "2 people",
+      views: "Viral now",
+      difficulty: "Easy",
+    },
+    origin: {
+      title: "Where it came from",
+      text: "A Twitter dating-advice account claimed straight posture in photos equals dominance. It spread to TikTok and Instagram, and experts have since called it out: one photo can't tell you anything.",
+      source: "TikTok & Instagram · green line theory",
+    },
+    mission: {
+      eyebrow: "STEP 1 OF 2 · DO THIS WITH A PHOTO",
+      title: "Draw the line.",
+      instruction:
+        "Pick a normal photo of you two standing. Imagine a green line from each head to the floor.",
+      quote: "\"Who's standing straighter?\"",
+      tips: [
+        "Don't overthink which photo — the first one you find is fine.",
+        "Notice who leans toward whom, and how it feels to look at it.",
+        "Then remember: it's a photo, not a relationship.",
+      ],
+      cta: "I drew it. Now what?",
+    },
+    reactions: {
+      eyebrow: "STEP 2 OF 2 · WHAT DID YOU NOTICE?",
+      title: "Pick your take.",
+      subtitle: "Be honest — this is about the photo, not your partner.",
+      options: [
+        {
+          id: "leanedin",
+          label: "They lean toward me — and it feels right",
+          hint: "That's what liking looks like, not weakness.",
+          verdict: "green",
+        },
+        {
+          id: "straight",
+          label: "I'm the straight one. Do I 'lead'?",
+          hint: "The theory says yes. Science says no.",
+          verdict: "complicated",
+        },
+        {
+          id: "both",
+          label: "We're both leaning in",
+          hint: "Then the theory just collapsed. Good.",
+          verdict: "green",
+        },
+        {
+          id: "awkward",
+          label: "It made me weirdly competitive",
+          hint: "The theory works. That's the problem with it.",
+          verdict: "red",
+        },
+      ],
+    },
+    verdicts: {
+      green: {
+        headline: "You leaned in. So what.",
+        description:
+          "Leaning toward someone you like is just what liking looks like. There's no 'submissive' here.",
+        science:
+          "Body language expert Sean Johns told UNILAD there's no study behind the green line theory — it loosely misuses proxemics, the study of how people use space. One photo can't show a dynamic; consistent patterns can.",
+      },
+      complicated: {
+        headline: "You bought the line. Literally.",
+        description:
+          "Fair — it's a sticky idea. But a straight spine in one photo isn't a power dynamic.",
+        science:
+          "The theory comes from a Twitter account's dating advice, not research. Even its 'proxemics' root studies space over time, not a frozen frame. One photo is a snapshot, not a scorecard.",
+      },
+      red: {
+        headline: "It got under your skin.",
+        description:
+          "The theory is built to make you score people. Noticing that is the useful part.",
+        science:
+          "The green line theory hands people a scorecard for judging relationships from one angle — exactly why experts call it out. If a test makes you compete with your partner, that's worth noticing.",
+      },
+    },
+    share: {
+      kicker: "I tried the Green Line Theory",
+      prompt: "Would yours pass?",
+    },
+  },
+  {
+    id: "tell-me",
+    name: "Tell Me Without Telling Me",
+    category: "Relationship",
+    tagline: "Prove it with a detail, not a sentence.",
+    hook: "The question that hits different.",
+    description:
+      "Say 'tell me you love me without telling me you love me'. The answer isn't a phrase — it's a small, specific thing they do only for you.",
+    meta: {
+      time: "1 minute",
+      players: "2 people",
+      views: "30M+ views",
+      difficulty: "Easy",
+    },
+    origin: {
+      title: "Where it came from",
+      text: "A TikTok prompt that became a couple trend: the best answers are actions so specific they couldn't be copied from a greeting card.",
+      source: "TikTok · tell me without telling me",
+    },
+    mission: {
+      eyebrow: "STEP 1 OF 2 · ASK THIS OUT LOUD",
+      title: "Say the line.",
+      instruction: "Look at them and ask, in a normal voice:",
+      quote: "\"Tell me you love me without telling me you love me.\"",
+      tips: [
+        "Let the silence sit. Don't help them out.",
+        "Listen for specifics — a habit, a memory, a tiny sacrifice.",
+        "Generic answers don't count. That's the whole game.",
+      ],
+      cta: "I asked. Now what?",
+    },
+    reactions: {
+      eyebrow: "STEP 2 OF 2 · WHAT DID THEY SAY?",
+      title: "Pick what happened.",
+      subtitle: "Be honest. Nobody sees this but you.",
+      options: [
+        {
+          id: "specific",
+          label: "They named a tiny, specific thing",
+          hint: "The 5am lunch. The exact gift. That's the answer.",
+          verdict: "green",
+        },
+        {
+          id: "action",
+          label: "They just did something instead of talking",
+          hint: "Showed, didn't tell. Respect.",
+          verdict: "green",
+        },
+        {
+          id: "generic",
+          label: "They said 'I just do'",
+          hint: "Sweet, vague, and not the point.",
+          verdict: "complicated",
+        },
+        {
+          id: "joke",
+          label: "They made it into a joke",
+          hint: "Funny — but dodging is still dodging.",
+          verdict: "red",
+        },
+      ],
+    },
+    verdicts: {
+      green: {
+        headline: "They know the small stuff.",
+        description:
+          "A specific detail beats a thousand 'I love you's. They've been paying attention.",
+        science:
+          "Gottman's 'love maps' are the detailed knowledge partners hold about each other's inner world. Specific memories and habits — not grand gestures — are what those maps are made of.",
+      },
+      complicated: {
+        headline: "Sweet. But vague.",
+        description:
+          "The feeling is probably real. The answer just didn't give you anything to hold.",
+        science:
+          "A love map is built from particulars: how someone takes their coffee, what they were scared of at 19. Warmth without detail is a start, not the finished picture.",
+      },
+      red: {
+        headline: "They dodged it.",
+        description:
+          "A joke is a clean way out of a sincere question. Once is fine. Watch for a pattern.",
+        science:
+          "Humor is one of the healthiest ways couples handle tension — but a joke can also be an exit ramp. The signal isn't one dodge; it's whether sincere questions reliably get met with deflection.",
+      },
+    },
+    share: {
+      kicker: "I tried 'tell me without telling me'",
+      prompt: "What would yours say?",
+    },
+  },
+  {
+    id: "dont-laugh",
+    name: "The Don't Laugh Challenge",
+    category: "Relationship",
+    tagline: "One of you breaks. Probably both.",
+    hook: "The most viral couple format.",
+    description:
+      "Try to make each other laugh without speaking. First one to crack loses — and the loser usually laughs hardest.",
+    meta: {
+      time: "2 minutes",
+      players: "2 people",
+      views: "50M+ views",
+      difficulty: "Easy",
+    },
+    origin: {
+      title: "Where it came from",
+      text: "One of the oldest couple formats on TikTok, still everywhere in 2026: inside jokes, faces, and zero words.",
+      source: "TikTok · don't laugh challenge",
+    },
+    mission: {
+      eyebrow: "STEP 1 OF 2 · DO THIS IN REAL LIFE",
+      title: "Don't make a sound.",
+      instruction: "Sit face to face. No talking. Try to make the other person laugh.",
+      quote: "\"First one to crack loses.\"",
+      tips: [
+        "Inside jokes are legal. So are faces.",
+        "No touching, no words, no phones.",
+        "Whoever laughs first does the dishes. Or not — your call.",
+      ],
+      cta: "I tried it. Now what?",
+    },
+    reactions: {
+      eyebrow: "STEP 2 OF 2 · WHO CRACKED?",
+      title: "Pick what happened.",
+      subtitle: "Be honest. Nobody sees this but you.",
+      options: [
+        {
+          id: "both",
+          label: "We both lost it instantly",
+          hint: "No winner. Best possible outcome.",
+          verdict: "green",
+        },
+        {
+          id: "they",
+          label: "They cracked first",
+          hint: "You've still got it.",
+          verdict: "green",
+        },
+        {
+          id: "me",
+          label: "I cracked first",
+          hint: "Your inside jokes got you. Fair.",
+          verdict: "complicated",
+        },
+        {
+          id: "nobody",
+          label: "Nobody laughed at all",
+          hint: "Commitment to the bit. Respect.",
+          verdict: "complicated",
+        },
+      ],
+    },
+    verdicts: {
+      green: {
+        headline: "You can still make them laugh.",
+        description:
+          "Shared laughter is its own kind of intimacy. Two people who crack each other up are doing something right.",
+        science:
+          "Couples who laugh together report higher satisfaction, researchers found. Shared humor isn't a distraction from closeness — it's one of the ways closeness gets built.",
+      },
+      complicated: {
+        headline: "One of you held it together.",
+        description: "Funny is funny, but someone didn't crack. That's data — not a verdict.",
+        science:
+          "Playfulness is turn-taking. Sometimes one person is 'on' and the other isn't; energy and timing matter. One round tells you about the moment, not the relationship.",
+      },
+      red: {
+        headline: "Not a laughing matter.",
+        description: "One test never defines a relationship. But it's worth noticing if fun has gone quiet.",
+        science:
+          "One failed round means nothing. If playfulness is consistently missing, the better move is to talk about it — not to run another test.",
+      },
+    },
+    share: {
+      kicker: "I tried the Don't Laugh Challenge",
+      prompt: "Who cracks first with yours?",
+    },
+  },
+  {
+    id: "telepathy",
+    name: "The Couple Telepathy Test",
+    category: "Relationship",
+    tagline: "Say it at the same time. No cheating.",
+    hook: "How in sync are you, really?",
+    description:
+      "Answer simple questions at the same time — no discussing. Match on enough of them and the internet calls it telepathy.",
+    meta: {
+      time: "3 minutes",
+      players: "2 people",
+      views: "18M+ views",
+      difficulty: "Fun",
+    },
+    origin: {
+      title: "Where it came from",
+      text: "The 'Who Knows Me Better' and telepathy formats keep resurfacing on TikTok: the thrill is in how often small answers line up.",
+      source: "TikTok · couple telepathy test",
+    },
+    mission: {
+      eyebrow: "STEP 1 OF 2 · DO THIS IN REAL LIFE",
+      title: "Count to three.",
+      instruction: "Ask each question out loud and answer at the same time. No clues.",
+      quote: "\"Favorite snack. Dream trip. Their worst habit.\"",
+      tips: [
+        "Three rounds is enough: snack, movie, dream vacation.",
+        "Say your answer out loud on three. No hints beforehand.",
+        "Keep score — matches only count if they're exact.",
+      ],
+      cta: "I played. Now what?",
+    },
+    reactions: {
+      eyebrow: "STEP 2 OF 2 · HOW MANY MATCHED?",
+      title: "Pick your score.",
+      subtitle: "Three rounds. Be honest.",
+      options: [
+        {
+          id: "all",
+          label: "All three matched",
+          hint: "Annoyingly in sync. The internet calls this telepathy.",
+          verdict: "green",
+        },
+        {
+          id: "two",
+          label: "Two matched",
+          hint: "Solid. You know the outline and most of the detail.",
+          verdict: "green",
+        },
+        {
+          id: "one",
+          label: "One matched",
+          hint: "One out of three — the small stuff is fuzzy.",
+          verdict: "complicated",
+        },
+        {
+          id: "none",
+          label: "None matched",
+          hint: "Different people, or you've stopped noticing.",
+          verdict: "red",
+        },
+      ],
+    },
+    verdicts: {
+      green: {
+        headline: "You're reading the same page.",
+        description:
+          "Three for three isn't magic. It's a lot of ordinary attention paid over a long time.",
+        science:
+          "Gottman's 'love maps' are built from the small details partners accumulate about each other. High overlap on everyday preferences is one sign those maps are detailed and current.",
+      },
+      complicated: {
+        headline: "You know the outline.",
+        description: "Two out of three — the big picture is there, the specifics are hit or miss.",
+        science:
+          "Love maps go stale when people stop asking small questions. A few misses on everyday preferences is normal. Curiosity refreshes them.",
+      },
+      red: {
+        headline: "You're guessing.",
+        description: "Zero matches on easy questions is worth a conversation — not a conclusion.",
+        science:
+          "Telepathy tests are entertainment, not assessment. But consistently missing the basics is a nudge to ask directly instead of assuming.",
+      },
+    },
+    share: {
+      kicker: "I tried the Couple Telepathy Test",
+      prompt: "How many would yours get?",
+    },
+  },
+  {
+    id: "finger-down",
+    name: "Put a Finger Down: Couples",
+    category: "Relationship",
+    tagline: "One finger per guilty truth.",
+    hook: "The 2026 confession trend.",
+    description:
+      "Read the statements out loud. Put a finger down for each one that's true. By the end, you'll know exactly how much you've hidden.",
+    meta: {
+      time: "2 minutes",
+      players: "2 people",
+      views: "25M+ views",
+      difficulty: "Spicy",
+    },
+    origin: {
+      title: "Where it came from",
+      text: "Put-a-finger-down exploded in early 2026, and the couples edition turned it into a confession game.",
+      source: "TikTok · put a finger down couples",
+    },
+    mission: {
+      eyebrow: "STEP 1 OF 2 · DO THIS IN REAL LIFE",
+      title: "Read them out.",
+      instruction: "Take turns. One reads, both put a finger down if it's true.",
+      quote: "\"Put a finger down if you've faked being asleep to dodge a talk.\"",
+      tips: [
+        "Try: stalked their ex, knew within a month, cried over them.",
+        "No explaining. A finger down is the whole answer.",
+        "Count how many fingers you each put down at the end.",
+      ],
+      cta: "I played. Now what?",
+    },
+    reactions: {
+      eyebrow: "STEP 2 OF 2 · HOW DID IT GO?",
+      title: "Pick what happened.",
+      subtitle: "Be honest. Nobody sees this but you.",
+      options: [
+        {
+          id: "laughed",
+          label: "We laughed and confessed to everything",
+          hint: "Full fingers down. Zero shame.",
+          verdict: "green",
+        },
+        {
+          id: "few",
+          label: "A couple of fingers, nothing serious",
+          hint: "Normal. Everyone has a few.",
+          verdict: "green",
+        },
+        {
+          id: "them",
+          label: "They put down more than me",
+          hint: "Now you have questions. Fair.",
+          verdict: "complicated",
+        },
+        {
+          id: "silent",
+          label: "We didn't want to play",
+          hint: "Avoiding the game is also an answer.",
+          verdict: "red",
+        },
+      ],
+    },
+    verdicts: {
+      green: {
+        headline: "Nothing to hide. Apparently.",
+        description:
+          "Fingers down and laughter is the best case. You can both be silly about what you'd normally hide.",
+        science:
+          "Self-disclosure — sharing the small, slightly embarrassing truths — is one way closeness builds. A game like this makes disclosure playful instead of heavy.",
+      },
+      complicated: {
+        headline: "You kept a few back.",
+        description: "Not every finger goes down. That's allowed — some things are yours.",
+        science:
+          "Privacy inside a relationship is normal and healthy. A low finger count doesn't mean distance; it might mean you're selective about what you confess in a game.",
+      },
+      red: {
+        headline: "You didn't want to play.",
+        description: "Declining is a choice too. It doesn't prove anything — but notice why.",
+        science:
+          "Avoidance isn't always about a person. If certain questions felt too loaded even as a game, that's worth a real conversation — not a verdict.",
+      },
+    },
+    share: {
+      kicker: "I played Put a Finger Down: Couples",
+      prompt: "How many would yours put down?",
+    },
+  },
 ];
 
 function getTest(id) {

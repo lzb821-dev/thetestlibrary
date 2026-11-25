@@ -107,21 +107,21 @@ const TESTS = [
         description:
           "You made a tiny bid and they picked it up. That follow-up question is the whole test.",
         science:
-          "Gottman called these 'bids for connection' — small reaches for attention. Couples who stayed together answered about 86% of the time; couples who split, about 33%. The bird was never the point. The turning-toward was.",
+          "Gottman called these 'bids for connection' — small reaches for attention, like 'look at that bird'. In his observational studies, couples who stayed together answered about 86% of these bids; couples who later split answered about 33%. The bird was never the point. The turning-toward was. One bid means little, but the ratio over weeks is one of the more reliable signals researchers have.",
       },
       complicated: {
         headline: "They heard you. Just barely.",
         description:
           "Acknowledged, but not explored. One flat 'oh cool' is a bad day, not a diagnosis.",
         science:
-          "Gottman's extremes are clear — turning toward or turning away. Real life is mostly the gray middle: a half-response, a distracted nod. One gray moment tells you almost nothing.",
+          "Gottman's categories are stark — turning toward or turning away — but real life lives in the gray middle. A distracted nod, a half 'mm?', an answer while scrolling: these aren't clean misses or clean hits. Researchers code them by patterns across many bids, not single moments. One flat response is data about a tired Tuesday, not a readout on your relationship.",
       },
       red: {
         headline: "They turned away. That's the signal.",
         description:
           "You reached and nothing came back. One miss isn't a verdict — but notice how it felt.",
         science:
-          "Consistently missing bids builds distance over time, Gottman found. But a five-second test is a shaky measure. If this keeps happening, the honest move is to say it out loud, not run another test.",
+          "Consistently missing bids builds distance over time, Gottman found — not through one big fight, but through hundreds of small unanswered moments. Still, a five-second test is a shaky instrument: stress, noise, and timing all distort it. If this keeps happening, the honest move is to say it out loud. 'I feel ignored when you don't respond' will tell you more than another bird.",
       },
     },
     share: {
@@ -198,21 +198,21 @@ const TESTS = [
         description:
           "No hesitation, no scorekeeping. They did it because you asked — that's the tell.",
         science:
-          "Acts of service is one of the five love languages: showing care by doing things for someone. The favor here is deliberately tiny — small enough that willingness, not effort, is what you're seeing.",
+          "Acts of service is one of the five love languages described by counselor Gary Chapman: showing care by doing things for someone. The favor here is deliberately tiny — small enough that willingness, not effort, is what you're seeing. Researchers who study everyday care find that these low-cost, high-frequency gestures often predict satisfaction better than rare grand gestures, precisely because they're repeatable.",
       },
       complicated: {
         headline: "Done. With a side of attitude.",
         description:
           "They did it, so the box is ticked. But the sigh is part of the answer too.",
         science:
-          "Acts of service only land as care when they're given freely. The same task feels warm or cold depending entirely on how it's offered — and one tired sigh is not a pattern.",
+          "Acts of service only land as care when they're given freely. The exact same task feels warm or cold depending on how it's offered — a quick peel versus a sigh and a peel. Relationship researchers distinguish the act from the attitude around it; recipients read the attitude. One tired sigh is not a pattern, but notice whether the sigh is becoming the usual wrapper.",
       },
       red: {
         headline: "'Do it yourself.' Loud and clear.",
         description:
           "A tiny ask, a flat no. Maybe they're exhausted — but the refusal still tells you something.",
         science:
-          "Researchers of the five love languages note that when someone consistently resists small requests, acts of service may simply not be how they express care. Ask what their language is before you conclude anything.",
+          "Chapman's framework notes that people express care in different 'languages' — words, time, gifts, touch, or acts of service. When someone consistently resists small requests, acts of service may simply not be how they show up. Before you conclude anything, ask what their language is. A partner who never peels an orange but drives you to the airport at 5am may be speaking loudly in another tongue.",
       },
     },
     share: {
@@ -291,21 +291,21 @@ const TESTS = [
         description:
           "They played along instead of taking offense. That's playfulness — and couples who can be silly together tend to last.",
         science:
-          "Gottman's research on bids for connection found couples who stay together respond to each other's small invitations about 86% of the time, vs 33% for couples who split. Play is one of those invitations. Banter isn't the opposite of closeness — for a lot of couples, it IS the closeness.",
+          "Gottman's work found couples who stay together respond to small invitations roughly 86% of the time, versus 33% for couples who split. Play is one of those invitations. Banter isn't the opposite of closeness — for many couples it IS the closeness: a shared joke that says 'we're still us'. Researchers of couples' humor find that playful reframing helps partners move through tension without turning it into a fight.",
       },
       complicated: {
         headline: "They answered. Very literally.",
         description:
           "No joke, no pushback — a serious answer to a nonsense question. Not bad, but you were testing if they'd play.",
         science:
-          "Playfulness is contextual: the same person who banters with friends may go literal with a partner when tired or guarded. One straight answer is data about the moment, not the relationship.",
+          "Playfulness is contextual. The same person who banters with friends may go literal with a partner when they're tired, guarded, or unsure whether the question is serious. Absurd hypotheticals rely on both people recognizing the frame as play; if one doesn't, the answer turns earnest. One straight answer is data about the moment and the framing — not a verdict on their sense of humor.",
       },
       red: {
         headline: "They rage-quit. Found the bait.",
         description:
           "They took it personally and checked out. Rage bait is built to provoke, so this is partly the test's fault.",
         science:
-          "Rage bait is designed to provoke, so a sharp reaction isn't a clean read on anyone. The useful signal is what happens after: can you both laugh about it? Couples who repair well after tension fare far better than couples who never spike at all.",
+          "Rage bait is designed to provoke, so a sharp reaction is not a clean read on anyone — the test is partly measuring its own bait. The useful signal is what happens after: can you both laugh about it once the heat passes? Gottman's research on repair attempts found that couples who recover well from small spikes fare far better than couples who never spike at all. Conflict isn't the failure; failed repair is.",
       },
     },
     share: {
@@ -382,21 +382,21 @@ const TESTS = [
         description:
           "Leaning toward someone you like is just what liking looks like. There's no 'submissive' here.",
         science:
-          "Body language expert Sean Johns told UNILAD there's no study behind the green line theory — it loosely misuses proxemics, the study of how people use space. One photo can't show a dynamic; consistent patterns can.",
+          "Body language expert Sean Johns told UNILAD there is no study behind the green line theory — it loosely misuses proxemics, the study of how people use physical space. Leaning toward someone you like is ordinary approach behavior, not submission. A single photo is one frame of one moment; real proxemic research looks at how people position themselves over repeated interactions and different settings.",
       },
       complicated: {
         headline: "You bought the line. Literally.",
         description:
           "Fair — it's a sticky idea. But a straight spine in one photo isn't a power dynamic.",
         science:
-          "The theory comes from a Twitter account's dating advice, not research. Even its 'proxemics' root studies space over time, not a frozen frame. One photo is a snapshot, not a scorecard.",
+          "The theory traces to a Twitter dating-advice account, not a research lab. Even its 'proxemics' root studies how space changes across situations, not a frozen camera frame. Posture in a photo reflects a hundred things — shoes, floor, a photographer saying 'stand up straight' — almost none of them about power. It's a sticky idea precisely because it offers certainty from one glance. Certainty that cheap is usually wrong.",
       },
       red: {
         headline: "It got under your skin.",
         description:
           "The theory is built to make you score people. Noticing that is the useful part.",
         science:
-          "The green line theory hands people a scorecard for judging relationships from one angle — exactly why experts call it out. If a test makes you compete with your partner, that's worth noticing.",
+          "The green line theory hands people a scorecard for reading relationships from one angle, which is exactly why experts call it out. Its appeal is the promise of a secret signal anyone can decode. If a test makes you size up your partner — or feel sized up — that reaction is worth noticing. A relationship measured by posture is a relationship being turned into a competition, and that's the real red flag here.",
       },
     },
     share: {
@@ -472,21 +472,21 @@ const TESTS = [
         description:
           "A specific detail beats a thousand 'I love you's. They've been paying attention.",
         science:
-          "Gottman's 'love maps' are the detailed knowledge partners hold about each other's inner world. Specific memories and habits — not grand gestures — are what those maps are made of.",
+          "Gottman's 'love maps' are the detailed knowledge partners hold about each other's inner world — fears, favorites, the story behind a habit. Specific memories and small habits are what those maps are made of; grand gestures barely feature. In couples research, the ability to describe a partner's current worries and dreams predicts closeness better than how often people say 'I love you'. Specificity is the tell.",
       },
       complicated: {
         headline: "Sweet. But vague.",
         description:
           "The feeling is probably real. The answer just didn't give you anything to hold.",
         science:
-          "A love map is built from particulars: how someone takes their coffee, what they were scared of at 19. Warmth without detail is a start, not the finished picture.",
+          "A love map is built from particulars: how someone takes their coffee, what they were scared of at nineteen, which song they skip. Warmth without detail is a start, not the finished picture. Sometimes the vagueness is just performance nerves — being asked to prove love on the spot is awkward. If the specifics consistently aren't there, though, it can mean the map was detailed once and hasn't been updated lately.",
       },
       red: {
         headline: "They dodged it.",
         description:
           "A joke is a clean way out of a sincere question. Once is fine. Watch for a pattern.",
         science:
-          "Humor is one of the healthiest ways couples handle tension — but a joke can also be an exit ramp. The signal isn't one dodge; it's whether sincere questions reliably get met with deflection.",
+          "Humor is one of the healthiest ways couples handle tension, so a joke isn't automatically a dodge. But it can be an exit ramp: a clean way to leave a sincere question unanswered without refusing it. The signal isn't one deflection — everyone deflects sometimes. It's whether sincere questions reliably get met with a joke, and whether the person can drop the bit when you ask them to.",
       },
     },
     share: {
@@ -562,19 +562,19 @@ const TESTS = [
         description:
           "Shared laughter is its own kind of intimacy. Two people who crack each other up are doing something right.",
         science:
-          "Couples who laugh together report higher satisfaction, researchers found. Shared humor isn't a distraction from closeness — it's one of the ways closeness gets built.",
+          "Couples who laugh together report higher satisfaction in relationship studies. Shared humor isn't a distraction from closeness — it's one of the ways closeness gets built, a private language of timing and inside jokes that no outsider fully gets. Researchers describe it as a form of 'we-ness': small, repeated moments that say we're on the same team. That's why the loser usually laughs hardest.",
       },
       complicated: {
         headline: "One of you held it together.",
         description: "Funny is funny, but someone didn't crack. That's data — not a verdict.",
         science:
-          "Playfulness is turn-taking. Sometimes one person is 'on' and the other isn't; energy and timing matter. One round tells you about the moment, not the relationship.",
+          "Playfulness is turn-taking. Sometimes one person is 'on' and the other isn't; energy, mood, and timing all matter, and none of them are stable traits. A round where only one person cracks tells you about that round. Inside jokes also work differently depending on who's in on them. One mismatch is ordinary noise — you'd need many rounds in many moods before a pattern means anything.",
       },
       red: {
         headline: "Not a laughing matter.",
         description: "One test never defines a relationship. But it's worth noticing if fun has gone quiet.",
         science:
-          "One failed round means nothing. If playfulness is consistently missing, the better move is to talk about it — not to run another test.",
+          "One failed round means nothing — some people are just disciplined, or tired, or committed to winning. But if playfulness has quietly gone missing from the relationship, that's worth noticing. Researchers treat shared play as a maintenance behavior: something that keeps connection alive between the serious conversations. If the fun has drained out, the better move is to talk about it, not to run another test.",
       },
     },
     share: {
@@ -650,19 +650,19 @@ const TESTS = [
         description:
           "Three for three isn't magic. It's a lot of ordinary attention paid over a long time.",
         science:
-          "Gottman's 'love maps' are built from the small details partners accumulate about each other. High overlap on everyday preferences is one sign those maps are detailed and current.",
+          "Gottman's 'love maps' are built from the small details partners accumulate about each other over time. High overlap on everyday preferences — snack, movie, dream trip — is one sign those maps are detailed and current. Researchers caution that agreement can also come from shared background, so it isn't proof of intimacy on its own. Still, knowing what someone would pick before they say it is a form of attention you can't fake.",
       },
       complicated: {
         headline: "You know the outline.",
         description: "Two out of three — the big picture is there, the specifics are hit or miss.",
         science:
-          "Love maps go stale when people stop asking small questions. A few misses on everyday preferences is normal. Curiosity refreshes them.",
+          "Love maps go stale when people stop asking small questions. A few misses on everyday preferences is normal — most people can't reliably guess a partner's favorite snack, and that's not a crisis. What matters is curiosity: people who keep updating their map tend to stay accurate. Treat a miss as an invitation to ask, not evidence of distance. The question 'why that one?' is often better than the right answer.",
       },
       red: {
         headline: "You're guessing.",
         description: "Zero matches on easy questions is worth a conversation — not a conclusion.",
         science:
-          "Telepathy tests are entertainment, not assessment. But consistently missing the basics is a nudge to ask directly instead of assuming.",
+          "Telepathy tests are entertainment, not assessment — three easy questions have no diagnostic power. But consistently missing the basics is a useful nudge. Research on closeness suggests the gap isn't usually about caring less; it's about stopping the small daily check-ins that keep knowledge current. If you can't guess the easy things, ask directly instead of assuming. Assuming is where most of these gaps come from.",
       },
     },
     share: {
@@ -738,19 +738,19 @@ const TESTS = [
         description:
           "Fingers down and laughter is the best case. You can both be silly about what you'd normally hide.",
         science:
-          "Self-disclosure — sharing the small, slightly embarrassing truths — is one way closeness builds. A game like this makes disclosure playful instead of heavy.",
+          "Self-disclosure — sharing small, slightly embarrassing truths — is one way closeness builds. Psychologists describe a 'disclosure reciprocity' effect: when one person shares something vulnerable, the other often shares back, and the exchange deepens the connection. A game like this makes disclosure playful instead of heavy, lowering the cost of saying the quiet part out loud. Laughter is the wrapper that makes it safe.",
       },
       complicated: {
         headline: "You kept a few back.",
         description: "Not every finger goes down. That's allowed — some things are yours.",
         science:
-          "Privacy inside a relationship is normal and healthy. A low finger count doesn't mean distance; it might mean you're selective about what you confess in a game.",
+          "Privacy inside a relationship is normal and healthy; closeness does not require total disclosure. A low finger count doesn't mean distance — it might mean you're selective about what you confess in a game, or that some answers are nobody's business. Researchers distinguish chosen privacy from avoidance by how it feels: boundaries you choose feel calm, while things you're hiding tend to feel heavy. One is fine; the other is worth a conversation.",
       },
       red: {
         headline: "You didn't want to play.",
         description: "Declining is a choice too. It doesn't prove anything — but notice why.",
         science:
-          "Avoidance isn't always about a person. If certain questions felt too loaded even as a game, that's worth a real conversation — not a verdict.",
+          "Avoidance isn't always about a person — the format can feel corny, invasive, or just badly timed. But if certain questions felt too loaded even as a game, that's information. Researchers note that topics people joke about are often topics they haven't fully talked about. A refusal to play is a choice, not proof of anything. The useful follow-up isn't another test — it's 'which one made you not want to answer?'",
       },
     },
     share: {

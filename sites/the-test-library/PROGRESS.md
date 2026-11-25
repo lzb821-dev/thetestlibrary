@@ -1,8 +1,8 @@
 # The Test Library · 建站进度
 
 > 创建时间：2026-11-24 17:23
-> 最近更新：2026-11-25 09:49
-> 总体进度：8/14 步已完成（57%）
+> 最近更新：2026-11-25 10:08
+> 总体进度：9/14 步已完成（64%）
 > 当前步骤：第 2 步「变现目标测算」· 进行中
 
 ## 基本信息
@@ -28,7 +28,7 @@
 | 6 | 代码仓库与部署密钥 | 已完成 | 2026-11-24 | https://github.com/lzb821-dev/thetestlibrary （PUBLIC）最新提交 ad1a428 | gh CLI 登录 lzb821-dev；SSH key 无权限、HTTPS 凭据弹窗被禁，用 gh auth token 临时嵌入 URL 推送后还原 |
 | 7 | 部署上线与域名绑定 | 已完成 | 2026-11-24 | https://thetestlibrary.app 上线；单人/双人/Aura 全部页面、23 OG 图、20 分享页均 200 | Cloudflare 自动部署；4 种爬虫 UA 抓双人分享页均读到完整 OG 标签 |
 | 8 | 内容、解释与合规页 | 已完成 | 2026-11-25 | about.html + privacy.html 上线；6 主页面与 20 分享页页脚全部接入 About/Privacy 导航 | 隐私页覆盖 localStorage、Cookie、AdSense、GDPR/CCPA 退出权、COPPA；About 页介绍三条产品线与研究背景；16 个锚点+26 页脚链接零断链 |
-| 9 | 图标、PWA 与社交素材 | 进行中 |  | 23 张 1200×630 OG 图（含 Aura 五档）+ 全页面 og:image/twitter:card 上线可抓取 | 社交素材完成；favicon、PWA manifest 未做，故不标 done |
+| 9 | 图标、PWA 与社交素材 | 已完成 | 2026-11-25 | favicon.ico + 16/32/48 PNG + apple-touch-icon + icon-192/512 + site.webmanifest 全部上线；26 个页面 head 注入图标/manifest 链接；23 张 OG 图仍保留 | 图标用 Python PIL 几何绘制 T 标志（#c4b5fd on #0c0d0f），4x 超采样；生成器脚本 inject-head-links.js 幂等，分享页生成器 head() 已内置链接避免重生成丢失 |
 | 10 | 统计钩子与 ads.txt | 已完成 | 2026-11-25 | ads.txt 占位文件上线（根目录）+ Cloudflare Web Analytics 统计钩子接入全站 26 页 | 配置集中在 assets/js/site.config.js；未填 ID/token 时零外部请求、零假授权；填后跑 node scripts/generate-ads-txt.js 即生效 |
 | 11 | 后端与数据（按需） | 已跳过 |  |  | 纯静态站，判定与统计全在浏览器端（localStorage），无需 D1/后端 |
 | 12 | 变现申请与收款配置 | 未开始 |  |  | 广告变现尚未申请；域名成本已确认 Porkbun 首年$8.75/续费$14.93 |
@@ -53,7 +53,7 @@
 | 5 | 低 | C 方向：Aura Score 内容栏目 |  | 已完成 |
 | 6 | 高 | 填 Cloudflare Web Analytics token 打开真实统计 |  | 待办 |
 | 7 | 高 | 补 sitemap.xml + robots.txt，验证 GSC/Bing 并提交 |  | 待办 |
-| 8 | 中 | favicon + PWA manifest 收尾（第9步） |  | 待办 |
+| 8 | 中 | favicon + PWA manifest 收尾（第9步） |  | 已完成 |
 | 9 | 中 | 题库扩容到 8-10 个测试 + JSON-LD 结构化数据 |  | 待办 |
 | 10 | 高 | Reddit/TikTok 冷启动首批发帖 |  | 待办 |
 
@@ -106,3 +106,6 @@
 - 2026-11-25 09:48 新增后续计划「Reddit/TikTok 冷启动首批发帖」
 - 2026-11-25 09:49 用户反馈 AdSense 因站点刚上线需等约20天；等待期优先做统计通电、SEO收录、内容扩容与冷启动，收款材料(W-8BEN/Payoneer)同步准备
 - 2026-11-25 09:49 更新当前焦点与阻塞信息
+- 2026-11-25 10:08 步骤 9「图标、PWA 与社交素材」，进行中 → 已完成，更新关键产出，更新备注
+- 2026-11-25 10:08 后续计划第 8 项标记为已完成
+- 2026-11-25 10:08 新增 sitemap.xml(29 URL)+robots.txt 并上线；生成器 generate-sitemap.js 从 data.js 自动读页面清单；线上验证 10 个新文件全 200、MIME 正确、26 页 head 各 4 条图标链接、manifest JSON 合法
